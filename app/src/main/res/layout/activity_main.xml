@@ -32,4 +32,20 @@
         android:textSize= "40sp"
         android:textAlignment="center"/>
 
+    <ImageView
+        android:id="@+id/flashcard_add_button"
+        android:layout_height = "50dp"
+        android:layout_width = "50dp"
+        android:layout_alignParentLeft = "true"
+        android:layout_alignParentBottom = "true"
+        android:src="@drawable/add_icon" />
+
+    <ImageView
+        android:id="@+id/flashcard_cancel_button_main"
+        android:layout_height = "50dp"
+        android:layout_width = "50dp"
+        android:layout_alignParentEnd = "true"
+        android:layout_alignParentBottom = "true"
+        android:src="@drawable/cancel_icon" />
+
 </RelativeLayout>

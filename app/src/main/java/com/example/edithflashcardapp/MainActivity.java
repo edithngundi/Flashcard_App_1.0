@@ -2,9 +2,9 @@ package com.example.edithflashcardapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,9 +18,32 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.flashcard_question_textview).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ((TextView) findViewById(R.id.flashcard_question_textview)).setVisibility(View.INVISIBLE);
-                ((TextView) findViewById(R.id.flashcard_answer_textview)).setVisibility(View.VISIBLE);
+                (findViewById(R.id.flashcard_question_textview)).setVisibility(View.INVISIBLE);
+                (findViewById(R.id.flashcard_answer_textview)).setVisibility(View.VISIBLE);
             }
         });
+        findViewById(R.id.flashcard_cancel_button_main).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                MainActivity.this.startActivity(intent);
+            }
+        });
+        findViewById(R.id.flashcard_add_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick (View v){
+                Intent intent = new Intent(MainActivity.this, AddCardActivity.class);
+                MainActivity.this.startActivityForResult(intent,100);
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100) { // this 100 needs to match the 100 we used when we called startActivityForResult!
+            String string1 = data.getExtras().getString("string1"); // 'string1' needs to match the key we used when we put the string in the Intent
+            String string2 = data.getExtras().getString("string2");
+        }
     }
 }

@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Minerva/AndroidStudioProjects/EdithFlashcardApp/app/src/main/res/drawable/add_icon.xml" value="0.1" />
+        <entry key="..\:/Users/Minerva/AndroidStudioProjects/EdithFlashcardApp/app/src/main/res/layout/activity_add_card.xml" value="0.1" />
         <entry key="..\:/Users/Minerva/AndroidStudioProjects/EdithFlashcardApp/app/src/main/res/layout/activity_main.xml" value="0.2" />
       </map>
     </option>
