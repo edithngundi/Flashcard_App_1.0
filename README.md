@@ -1,6 +1,5 @@
 # Flashcard_App_1.0
 
-📝 `NOTE:` Paste the README templates for each subsequent lab here at the top, (i.e. lab 2, 3, 4). This will show a history of your development process including which users tories you completed and how your
 ## Lab 1
 ### App Description
 This is a flashcard app that displays a question and on tap displays the answer to the question.
